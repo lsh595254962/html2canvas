@@ -1,0 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
+# robots协议也称爬虫协议、爬虫规则等,是指网站可建立一个robots.txt文件来告诉搜索引擎哪些页面可以抓取,哪些页面不能抓取,而搜索引擎则通过读取robots.txt文件来识别这个页面是否允许被抓取。
+
+User-agent: *
+Disallow:
