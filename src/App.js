@@ -14,7 +14,7 @@ function App() {
       dataImg.src = canvas.toDataURL("image/png");
       const alink = document.createElement("a");
       alert('src',dataImg.src)
-      alink.href = dataImg.src;
+      alink.href = 'https://img30.360buyimg.com/pop/s1180x940_jfs/t1/131876/5/23042/47442/6295cf3bE3cfc4b50/37b10b5cf9f04e93.jpg.webp';
       alink.download = "testImg.jpg";
       alink.click();
     });
