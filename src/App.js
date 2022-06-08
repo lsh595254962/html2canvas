@@ -2,7 +2,7 @@ import html2canvas from "html2canvas";
 import "./App.css";
 
 function App() {
-  const handleDownload = () => {
+  const downHtml2canvas = () => {
     let dom = document.getElementById("wrap");
     const { width, height } = dom.getBoundingClientRect();
     html2canvas(dom, {
@@ -13,15 +13,23 @@ function App() {
       const dataImg = new Image();
       dataImg.src = canvas.toDataURL("image/png");
       const alink = document.createElement("a");
-      alert('src',dataImg.src)
-      alink.href = 'https://img30.360buyimg.com/pop/s1180x940_jfs/t1/131876/5/23042/47442/6295cf3bE3cfc4b50/37b10b5cf9f04e93.jpg.webp';
+      alink.href = dataImg.src;
       alink.download = "testImg.jpg";
       alink.click();
     });
   };
+
+  const handleDownload = () => {
+    const alink = document.createElement("a");
+    alink.href =
+      "https://img30.360buyimg.com/pop/s1180x940_jfs/t1/131876/5/23042/47442/6295cf3bE3cfc4b50/37b10b5cf9f04e93.jpg.webp";
+    alink.download = "绝对路径.jpg";
+    alink.click();
+  };
   return (
     <div className="App">
-      <button onClick={() => handleDownload()}>download</button>
+      <button onClick={() => handleDownload()}>绝对路径</button>
+      <button onClick={() => downHtml2canvas()}>downHtml2canvas</button>
       <div className="wrap" id="wrap">
         <img
           className="goods-img"
