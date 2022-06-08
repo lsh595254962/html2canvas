@@ -13,6 +13,7 @@ function App() {
       const dataImg = new Image();
       dataImg.src = canvas.toDataURL("image/png");
       const alink = document.createElement("a");
+      alert('src',dataImg.src)
       alink.href = dataImg.src;
       alink.download = "testImg.jpg";
       alink.click();
