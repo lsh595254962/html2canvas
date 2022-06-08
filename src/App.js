@@ -2,13 +2,6 @@ import html2canvas from "html2canvas";
 import "./App.css";
 
 function App() {
-  const DPR = () => {
-    // 获取设备dpi
-    if (window.devicePixelRatio && window.devicePixelRatio > 1) {
-      return window.devicePixelRatio;
-    }
-    return 1;
-  };
   const handleDownload = () => {
     let dom = document.getElementById("wrap");
     const { width, height } = dom.getBoundingClientRect();
@@ -40,7 +33,8 @@ function App() {
         </p>
         <p>US$ 29.08</p>
         <img
-          src="http://ued.vemic.com/sync/6274c7f5991b9313f559c59a/%E6%9C%80%E6%96%B0%E5%88%B6%E4%BD%9C%E4%B8%AD/Doba%20Direct%20%E5%95%86%E5%93%81+%E5%BA%97%E9%93%BA/images/products/u488.png"
+          className="erweima"
+          src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg9.doubanio.com%2Fview%2Fgroup_topic%2Fl%2Fpublic%2Fp509178275.jpg&refer=http%3A%2F%2Fimg9.doubanio.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1657268833&t=35cc005c3112de6a289bcd3e57f4c0fd"
           alt="erweima"
         />
       </div>
